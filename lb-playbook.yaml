@@ -1,0 +1,14 @@
+---
+  - name: LB setup playbook 
+#    hosts: web
+    tasks: 
+      - name: install httpd
+        yum:
+          name: httpd
+          state: present
+
+      - name: service to be started
+        service:
+          name: httpd
+          state: started
+          enable: yes
