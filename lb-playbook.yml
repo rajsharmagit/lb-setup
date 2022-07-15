@@ -1,6 +1,6 @@
 ---
   - name: LB setup playbook 
-    hosts: web
+    hosts: load-balancer
     tasks: 
       - name: install httpd
         yum:
