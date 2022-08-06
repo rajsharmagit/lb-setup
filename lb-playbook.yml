@@ -1,15 +1,11 @@
 ---
   - name: LB setup playbook 
-    hosts: load-balancer
+    hosts: loadbalancers
     become: yes
     tasks: 
-      - name: install httpd
+      - name: install proxy
         yum:
-          name: httpd
+          name: haproxy
           state: present
 
-      - name: service to be started
-        service:
-          name: httpd
-          state: started
-          enable: yes
+      
